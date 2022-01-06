@@ -1,9 +1,14 @@
 import { useState } from "react";
 import ScrollBarItem from "./ScrollBarItem";
+import Data from "../Database/db.json"
 import "./styles/scrollbar.css"
 
-const ScrollBar = () => {
-    const filtros = ["filtro 1", "filtro 2", "filtro 3", "filtro 4", "filtro 5"];
+const ScrollBar = ({filter}) => {
+    // const filtros = ["filtro 1", "filtro 2", "filtro 3", "filtro 4", "filtro 5"];
+    // console.log(Data.map(el=>(el.category)))
+
+    const categorys = new Set(Data.map((el)=>(el.category)));
+    const filtros = [...categorys]
 
     let initialValue = "Todos"
     const [filtro, setFiltro] = useState(initialValue)
@@ -33,9 +38,9 @@ const ScrollBar = () => {
         <div className="scrollbar">
             <div className="wrapper">
                 <div className="label-filtro">
-                    <p className="content" onClick={HandleReset}>
+                    <span className="content" onClick={HandleReset}>
                         {filtro}
-                    </p>
+                    </span>
                 </div>
                 {filtros.map((el, index) =>(
                     <ScrollBarItem key={index} id={index} filtro={el[0].toUpperCase() + el.slice(1)} handleInput={HandleInput}/>
