@@ -1,0 +1,86 @@
+.container-list {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-card {
+  background-color: grey;
+  min-width: 90%;
+  min-height: 140px;
+  margin: 10px 15px;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.category {
+  min-width: 70%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: indianred;
+  grid-column: 3/5;
+  grid-row: 1/2;
+  border-radius: 20px;
+  margin: 5px 15px 3px 0px;
+}
+
+.category p {
+  font-size: 12px;
+}
+
+.card-img {
+  width: 110px;
+  height: 110px;
+  background-color: hotpink;
+  grid-column: 1/2;
+  grid-row: 1/6;
+  margin: 20% 15px;
+}
+
+.buy {
+  grid-column: 4/5;
+  grid-row: 5/7;
+  border: none;
+  background-color: transparent;
+  margin-right: 10%;
+}
+
+.buy i {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  grid-column: 2/4;
+  grid-row: 2/6;
+}
+
+.info-header {
+  display: flex;
+}
+
+.info-header .product-price {
+  margin-left: 10%;
+}
+
+.product-info .product-title {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.product-info .product-price {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.product-info .product-description {
+  grid-column: 2/4;
+  grid-row: 3/6;
+}
