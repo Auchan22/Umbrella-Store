@@ -1,0 +1,11 @@
+footer {
+  background-color: grey;
+  height: 100px;
+  width: 100vw;
+  margin-top: 70px;
+}
+
+footer h5 {
+  position: relative;
+  bottom: 2px;
+}
